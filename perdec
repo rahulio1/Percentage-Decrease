@@ -1,0 +1,33 @@
+import random
+print ("Welcome to the percentage decrease questionnaire")
+random_number1 = (random.randint(1, 100))
+random_number2 = (random.randint(1, 100))
+random_number3 = (random.randint(1, 100))
+random_number4 = (random.randint(1, 100))
+print ("Q. What is", random_number1, "decreased by", random_number2, "%?")
+print ("A.", ((random_number2/100)*random_number1)+random_number1)
+print ("B.", ((random_number2/100)*random_number1)/10)
+print ("C.", ((random_number1/100)*random_number2)+random_number2)
+answer_1 = ((random_number2/100)*random_number1)
+print ("D.", (random_number1 - answer_1))
+print ("Disclaimer: Answer with the letter next to number")
+answer = input()
+if answer.lower() == "d":
+  answer_2 = input("Correct! If you want more questions, press y, if not press n")
+else:
+  print ("Incorrect. The correct answer was D")
+if answer_2.lower() == "y": 
+  print ("Q. What is", random_number3, "decreased by", random_number4, "%?")
+  answer_3 = ((random_number4/100)*random_number3)
+  print ("A.", (random_number3 - answer_3))
+  print ("B.", ((random_number4/100)*random_number3)+random_number3)
+  print ("C.", ((random_number3/100)*random_number4)+random_number4)
+  print ("D.", ((random_number4/100)*random_number3)+random_number1)
+  print ("Disclaimer: Answer with the letter next to number")
+else:
+  print ("You can now leave")
+answer_4 = input()
+if answer_4.lower() == "a":
+  print ("Correct! Press the run button at the top if you want more questions!")
+else:
+  print ("Incorrect. The correct answer was A")
